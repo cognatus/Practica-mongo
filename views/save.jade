@@ -1,0 +1,25 @@
+﻿extends layout
+
+block content
+  h1 Guardar personaje
+  form(method="post", action="#{action}")
+    -if(put)
+      input(type="hidden", name="_method", value="PUT")
+    label Nombre
+    br
+    input(type="text", name="nombre", required="required", value="#{datos.nombre}")
+    br
+    label Apellido
+    br
+    input(type="text", name="apellido", required="required", value="#{datos.apellido}")
+    br
+    label Edad
+    br
+    input(type="text", name="edad", required="required", value="#{datos.edad}")
+    br
+    label Biografía
+    br
+    textarea(name="biografia", cols="50", rows="5", required="required") #{datos.biografia}
+    br
+    input(type="submit", value="Guardar")
+    a(href="/") Cancelar

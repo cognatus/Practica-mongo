@@ -1,0 +1,7 @@
+﻿extends layout
+
+block content
+  h1 #{datos.nombre} #{datos.apellido} #{datos.edad}
+  div(style='white-space:pre;') #{datos.biografia}
+  br
+  a(href="/") Volver atrás
